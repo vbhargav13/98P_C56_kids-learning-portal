@@ -1,41 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Learning Portal</title>
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <script>
-    window.onload = function() {
-      const name = localStorage.getItem('studentName') || 'Student';
-      const subject = localStorage.getItem('favSubject') || 'Learning';
-      document.getElementById('welcome-msg').innerText =
-        `Welcome, ${name}! Enjoy exploring your favorite subject: ${subject}`;
-    };
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Educational Site</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
-    <h1 id="welcome-msg">Welcome to My Learning Portal</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <section>
-    <h2>My Interests</h2>
-    <ul>
-      <li>Cartoons</li>
-      <li>Pets</li>
-      <li>School Subjects</li>
-    </ul>
-    <img src="images/cartoon.jpg" alt="Favorite Cartoon" width="200">
-  </section>
-
-  <footer>
-    <p>Created with ❤️ by Me</p>
-  </footer>
+<body class="login-page">
+  <main>
+    <h1>Welcome to the Educational Site</h1>
+    <p>Please log in to continue.</p>
+    <form id="loginForm">
+      <label for="loginName">Name:</label>
+      <input type="text" id="loginName" required placeholder="Enter your name" />
+      <button type="submit">Login</button>
+    </form>
+  </main>
+  <script src="script.js" defer></script>
 </body>
 </html>
