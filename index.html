@@ -2,40 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Learning Portal</title>
-  <link rel="icon" href="images/favicon.ico">
+  <title>Kids Learning Portal</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    window.onload = function() {
-      const name = localStorage.getItem('studentName') || 'Student';
-      const subject = localStorage.getItem('favSubject') || 'Learning';
-      document.getElementById('welcome-msg').innerText =
-        `Welcome, ${name}! Enjoy exploring your favorite subject: ${subject}`;
-    };
-  </script>
 </head>
 <body>
   <header>
-    <h1 id="welcome-msg">Welcome to My Learning Portal</h1>
+    <h1>Welcome to the Kids' Learning Portal</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="feedback.html">Feedback</a>
+      <div class="auth-links">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
     </nav>
   </header>
-
   <section>
-    <h2>My Interests</h2>
-    <ul>
-      <li>Cartoons</li>
-      <li>Pets</li>
-      <li>School Subjects</li>
-    </ul>
-    <img src="images/cartoon.jpg" alt="Favorite Cartoon" width="200">
+    <h2>Hello Young Explorer!</h2>
+    <p>Sign in or sign up to begin your fun learning journey!</p>
+    <img src="images/chalkboard.png" alt="Welcome Image" style="max-width: 300px;">
   </section>
-
-  <footer>
-    <p>Created with ❤️ by Me</p>
-  </footer>
+  <footer>© 2025 Kids Learning Portal</footer>
 </body>
 </html>

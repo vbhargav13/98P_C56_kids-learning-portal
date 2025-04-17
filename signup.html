@@ -2,33 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>Sign Up</title>
   <link rel="stylesheet" href="style.css">
   <script>
-    function loginUser() {
+    function registerUser() {
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
-      const storedPassword = localStorage.getItem("user_" + username);
-
-      if (storedPassword && storedPassword === password) {
-        localStorage.setItem("loggedInUser", username);
-        window.location.href = "dashboard.html";
-      } else {
-        alert("Invalid username or password.");
+      if (!username || !password) {
+        alert("Please enter both username and password.");
+        return;
       }
+
+      localStorage.setItem("user_" + username, password);
+      alert("Sign up successful! You can now log in.");
+      window.location.href = "login.html";
     }
   </script>
 </head>
 <body>
-  <header><h1>Login</h1></header>
+  <header><h1>Sign Up</h1></header>
   <section>
-    <form onsubmit="event.preventDefault(); loginUser();">
+    <form onsubmit="event.preventDefault(); registerUser();">
       <label for="username">Username:</label><br>
       <input type="text" id="username"><br><br>
       <label for="password">Password:</label><br>
       <input type="password" id="password"><br><br>
-      <button type="submit">Login</button>
+      <button type="submit">Register</button>
     </form>
   </section>
 </body>

@@ -1,31 +1,40 @@
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fefefe;
   margin: 0;
   padding: 0;
   color: #333;
 }
-
 header {
-  background-color: #00aaff;
+  background-color: #4CAF50;
   color: white;
-  padding: 20px;
+  padding: 1rem;
   text-align: center;
 }
-
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 0.5rem 1rem;
+}
 nav a {
-  margin: 0 10px;
-  text-decoration: none;
   color: white;
-  font-weight: bold;
+  margin: 0 0.5rem;
+  text-decoration: none;
 }
-
+nav .auth-links {
+  margin-left: auto;
+}
 section {
-  padding: 20px;
-}
-
-footer {
+  padding: 2rem;
   text-align: center;
-  padding: 10px;
-  background-color: #eeeeee;
+}
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
 }
