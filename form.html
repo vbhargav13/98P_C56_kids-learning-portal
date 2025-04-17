@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Profile Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function saveProfile() {
+      const name = document.getElementById('name').value;
+      const grade = document.getElementById('grade').value;
+      const subject = document.getElementById('subject').value;
+
+      localStorage.setItem('studentName', name);
+      localStorage.setItem('studentGrade', grade);
+      localStorage.setItem('favSubject', subject);
+
+      alert('Profile saved! Go back to the homepage.');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Student Profile Form</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <section>
+    <form onsubmit="event.preventDefault(); saveProfile();">
+      <label>Name:</label><br>
+      <input type="text" id="name" required><br><br>
+
+      <label>Grade:</label><br>
+      <select id="grade">
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+      </select><br><br>
+
+      <label>Favorite Subject:</label><br>
+      <input type="text" id="subject" required><br><br>
+
+      <button type="submit">Save Profile</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Thank you for sharing your profile!</p>
+  </footer>
+</body>
+</html>

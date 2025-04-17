@@ -5,10 +5,18 @@
   <title>My Learning Portal</title>
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="style.css">
+  <script>
+    window.onload = function() {
+      const name = localStorage.getItem('studentName') || 'Student';
+      const subject = localStorage.getItem('favSubject') || 'Learning';
+      document.getElementById('welcome-msg').innerText =
+        `Welcome, ${name}! Enjoy exploring your favorite subject: ${subject}`;
+    };
+  </script>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Learning Portal</h1>
+    <h1 id="welcome-msg">Welcome to My Learning Portal</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
